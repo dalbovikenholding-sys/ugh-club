@@ -4,7 +4,7 @@ const groups = [
   {
     label: 'Pris och leverans',
     faqs: [
-      { q: 'Vad kostar en hemsida hos Dalboviken Media?', a: 'Vi har tre paket: Core (14 900 kr), Pro (22 900 kr) och Pro+Drift (22 900 kr + 1 490 kr/mån). Alla priser är fasta utan dolda tilläggsavgifter. Du betalar efter godkänd leverans.' },
+      { q: 'Vad kostar en hemsida hos Dalboviken Media?', a: 'Vi har tre paket: Core (14 900 kr engångspris), Pro (22 900 kr engångspris) och Pro+Drift (22 900 kr uppstart, sedan 1 490 kr/mån). Alla priser är fasta utan dolda tilläggsavgifter. Du betalar efter godkänd leverans.' },
       { q: 'Hur kan ni leverera en hemsida på 7 dagar?', a: 'Vi arbetar med ett beprövat system och AI-verktyg för copy och design. Du fyller i ett kort formulär, vi tar det därifrån. Inga möten, inga långa revideringsrundor.' },
       { q: 'Betalar jag om jag inte är nöjd?', a: 'Nej. Du godkänner sajten innan betalning sker. Levererar vi inte det vi lovat betalar du ingenting.' },
     ],

@@ -34,7 +34,6 @@ export default function Problem() {
               style={{
                 background: 'rgba(255,255,255,0.04)',
                 border: '1px solid rgba(255,255,255,0.08)',
-                backdropFilter: 'blur(8px)',
               }}
             >
               <h3 className="font-sans font-semibold text-white/85 text-base mb-3">{p.title}</h3>

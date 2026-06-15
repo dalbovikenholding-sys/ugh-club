@@ -18,10 +18,10 @@ export default function SiteCTA() {
               Redo att få en hemsida som faktiskt jobbar för dig?
             </h2>
             <p className="font-sans text-white/45 text-base leading-relaxed mb-8">
-              Fyll i formuläret så hör vi av oss inom 24 timmar med en offert. Inga förpliktelser.
+              Maila oss så hör vi av oss inom 24 timmar med en offert. Inga förpliktelser.
             </p>
             <a
-              href="mailto:hej@dalboviken.se"
+              href="mailto:hej@dalboviken.se?subject=F%C3%B6rfr%C3%A5gan%20%E2%80%93%20Dalboviken%20Media"
               className="inline-flex items-center gap-2 font-sans font-semibold text-sm rounded-full"
               style={{
                 background: '#a8c4e8', color: '#080d18',
