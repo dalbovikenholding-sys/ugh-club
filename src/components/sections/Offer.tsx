@@ -10,10 +10,10 @@ export default function Offer() {
   return (
     <section id="offer" className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.70)' }}>
       <div className="max-w-5xl mx-auto px-6 py-24">
-        <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-white/30 mb-4">
+        <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-white/40 mb-4">
           Vad ingår
         </p>
-        <h2 className="font-serif italic text-white/90 mb-14" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)', maxWidth: '560px' }}>
+        <h2 className="font-serif italic text-white/95 mb-14" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)', maxWidth: '560px' }}>
           Allt du behöver för att se seriös ut och ta emot kunder online.
         </h2>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -22,17 +22,17 @@ export default function Offer() {
               key={item.name}
               className="rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1"
               style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px solid rgba(255,255,255,0.08)',
+                background: 'rgba(255,255,255,0.055)',
+                border: '1px solid rgba(255,255,255,0.11)',
               }}
             >
-              <h3 className="font-sans font-semibold text-white/85 text-base mb-3">{item.name}</h3>
-              <p className="font-sans text-white/45 text-sm leading-relaxed">{item.desc}</p>
+              <h3 className="font-sans font-semibold text-white/90 text-base mb-3">{item.name}</h3>
+              <p className="font-sans text-white/65 text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
-        <p className="font-sans text-white/30 text-xs mt-10 pt-7 border-t border-white/[0.07]">
-          <span className="text-white/55 font-medium">Inte inkluderat:</span> logga, fotografi, sociala medier.
+        <p className="font-sans text-white/35 text-xs mt-10 pt-7 border-t border-white/[0.07]">
+          <span className="text-white/60 font-medium">Inte inkluderat:</span> logga, fotografi, sociala medier.
         </p>
       </div>
     </section>

@@ -17,13 +17,13 @@ export default function Problem() {
   return (
     <section className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.70)' }}>
       <div className="max-w-5xl mx-auto px-6 py-24">
-        <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-white/30 mb-4">
+        <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-white/40 mb-4">
           Smärtpunkter
         </p>
-        <h2 className="font-serif italic text-white/90 mb-3" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
+        <h2 className="font-serif italic text-white/95 mb-3" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
           Känner du igen dig?
         </h2>
-        <p className="font-sans text-white/45 text-base mb-14">
+        <p className="font-sans text-white/60 text-base mb-14">
           Du är bra på ditt jobb. Det räcker inte längre.
         </p>
         <div className="grid gap-5 md:grid-cols-3">
@@ -32,12 +32,12 @@ export default function Problem() {
               key={p.title}
               className="rounded-2xl p-7"
               style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px solid rgba(255,255,255,0.08)',
+                background: 'rgba(255,255,255,0.055)',
+                border: '1px solid rgba(255,255,255,0.11)',
               }}
             >
-              <h3 className="font-sans font-semibold text-white/85 text-base mb-3">{p.title}</h3>
-              <p className="font-sans text-white/45 text-sm leading-relaxed">{p.text}</p>
+              <h3 className="font-sans font-semibold text-white/90 text-base mb-3">{p.title}</h3>
+              <p className="font-sans text-white/65 text-sm leading-relaxed">{p.text}</p>
             </div>
           ))}
         </div>

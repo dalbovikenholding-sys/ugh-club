@@ -17,7 +17,7 @@ export default function SiteCTA() {
             <h2 className="font-serif italic text-white/90 mb-4" style={{ fontSize: 'clamp(26px, 3.5vw, 46px)' }}>
               Redo att få en hemsida som faktiskt jobbar för dig?
             </h2>
-            <p className="font-sans text-white/45 text-base leading-relaxed mb-8">
+            <p className="font-sans text-white/60 text-base leading-relaxed mb-8">
               Maila oss så hör vi av oss inom 24 timmar med en offert. Inga förpliktelser.
             </p>
             <a

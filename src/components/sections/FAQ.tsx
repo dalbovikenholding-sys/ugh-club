@@ -45,7 +45,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         className="w-full text-left py-5 flex justify-between items-center gap-4"
         style={{ background: 'none', border: 'none', cursor: 'pointer' }}
       >
-        <span className="font-sans font-semibold text-white/80 text-sm">{q}</span>
+        <span className="font-sans font-semibold text-white/90 text-sm">{q}</span>
         <span
           className="font-sans text-white/30 flex-shrink-0 text-base transition-transform duration-250"
           style={{ transform: open ? 'rotate(180deg)' : 'none', display: 'block' }}
@@ -57,7 +57,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         className="overflow-hidden transition-all duration-300"
         style={{ maxHeight: open ? '300px' : '0' }}
       >
-        <p className="font-sans text-white/45 text-sm leading-relaxed pb-5">{a}</p>
+        <p className="font-sans text-white/65 text-sm leading-relaxed pb-5">{a}</p>
       </div>
     </div>
   )
@@ -68,13 +68,13 @@ export default function FAQ() {
     <section id="faq" className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.70)' }}>
       <div className="max-w-3xl mx-auto px-6 py-24">
         <div className="text-center mb-14">
-          <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-white/30 mb-4">
+          <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-white/40 mb-4">
             Vanliga frågor
           </p>
-          <h2 className="font-serif italic text-white/90 mb-3" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
+          <h2 className="font-serif italic text-white/95 mb-3" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
             Har du frågor?
           </h2>
-          <p className="font-sans text-white/40 text-sm">
+          <p className="font-sans text-white/55 text-sm">
             Maila oss på{' '}
             <a href="mailto:info@dalboviken.se" className="text-[#a8c4e8]" style={{ textDecoration: 'none' }}>
               info@dalboviken.se
@@ -84,12 +84,12 @@ export default function FAQ() {
         <div className="flex flex-col gap-8">
           {groups.map((group) => (
             <div key={group.label}>
-              <p className="font-sans text-[9px] tracking-[0.2em] uppercase text-white/20 mb-3 px-1">
+              <p className="font-sans text-[9px] tracking-[0.2em] uppercase text-white/40 mb-3 px-1">
                 {group.label}
               </p>
               <div
                 className="rounded-2xl px-6 md:px-8"
-                style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}
+                style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.10)' }}
               >
                 {group.faqs.map((faq, i) => (
                   <FAQItem key={i} {...faq} />

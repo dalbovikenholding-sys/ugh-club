@@ -10,13 +10,13 @@ export default function Process() {
   return (
     <section id="process" className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.70)' }}>
       <div className="max-w-5xl mx-auto px-6 py-24">
-        <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-white/30 mb-4">
+        <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-white/40 mb-4">
           Så funkar det
         </p>
-        <h2 className="font-serif italic text-white/90 mb-2" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
+        <h2 className="font-serif italic text-white/95 mb-2" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
           Från formulär till live på 7 dagar
         </h2>
-        <p className="font-sans text-white/40 text-base mb-16">Enkelt, förutsägbart och utan krångel.</p>
+        <p className="font-sans text-white/55 text-base mb-16">Enkelt, förutsägbart och utan krångel.</p>
 
         <div className="flex flex-col">
           {steps.map((step, i) => (
@@ -26,20 +26,20 @@ export default function Process() {
                   className="flex items-center justify-center font-sans font-semibold text-[#a8c4e8] text-xs"
                   style={{
                     width: '44px', height: '44px', borderRadius: '12px', flexShrink: 0,
-                    background: 'rgba(168,196,232,0.10)',
-                    border: '1px solid rgba(168,196,232,0.20)',
+                    background: 'rgba(168,196,232,0.12)',
+                    border: '1px solid rgba(168,196,232,0.25)',
                   }}
                 >
                   {i + 1}
                 </div>
                 {i < steps.length - 1 && (
-                  <div className="w-px flex-1 mt-2 bg-white/[0.07]" />
+                  <div className="w-px flex-1 mt-2 bg-white/[0.09]" />
                 )}
               </div>
               <div className="pb-2">
                 <p className="font-sans text-[10px] tracking-[0.15em] uppercase text-[#a8c4e8] mb-1">{step.day}</p>
-                <h3 className="font-sans font-semibold text-white/85 text-base mb-2">{step.title}</h3>
-                <p className="font-sans text-white/45 text-sm leading-relaxed">{step.desc}</p>
+                <h3 className="font-sans font-semibold text-white/90 text-base mb-2">{step.title}</h3>
+                <p className="font-sans text-white/65 text-sm leading-relaxed">{step.desc}</p>
               </div>
             </div>
           ))}
