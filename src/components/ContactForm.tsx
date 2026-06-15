@@ -64,7 +64,7 @@ export default function ContactForm() {
             whileTap={{ scale: 0.97 }}
             transition={{ duration: 0.15 }}
           >
-            Boka ett samtal
+            Kom igång →
           </motion.button>
         )}
       </motion.div>

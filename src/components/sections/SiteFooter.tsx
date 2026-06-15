@@ -39,7 +39,7 @@ export default function SiteFooter() {
       <div className="border-t border-white/[0.06]">
         <div className="max-w-5xl mx-auto px-6 py-5 flex flex-wrap justify-between gap-2">
           <span className="font-sans text-white/20 text-xs">© 2026 Dalboviken Media</span>
-          <a href="#" className="font-sans text-white/20 text-xs hover:text-white/50 transition-colors" style={{ textDecoration: 'none' }}>Integritetspolicy</a>
+          <a href="mailto:hej@dalboviken.se?subject=Integritetspolicy" className="font-sans text-white/20 text-xs hover:text-white/50 transition-colors" style={{ textDecoration: 'none' }}>Integritetspolicy</a>
         </div>
       </div>
     </footer>

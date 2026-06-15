@@ -18,8 +18,8 @@ export default function HeroContent() {
         className="text-white font-sans font-black leading-[1.05] tracking-[-0.02em] mb-1"
         style={{ fontSize: 'clamp(24px, 2.8vw, 48px)' }}
       >
-        <span className="block whitespace-nowrap">Din hemsida och</span>
-        <span className="block whitespace-nowrap">Google-närvaro, live på 7 dagar.</span>
+        <span className="block">Din hemsida och</span>
+        <span className="block">Google-närvaro, live på 7 dagar.</span>
       </h1>
 
       <p
