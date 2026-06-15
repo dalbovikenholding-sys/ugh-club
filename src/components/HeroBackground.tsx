@@ -18,12 +18,12 @@ function MistLayer({ x, y, width, opacity, delay, duration }: {
         width,
         height: width / 3.5,
         background: 'rgba(210, 230, 245, 1)',
-        filter: 'blur(45px)',
+        filter: 'blur(55px)',
         opacity,
       }}
       animate={{
-        x: [0, 50, 10, 40, 0],
-        opacity: [opacity, opacity * 1.35, opacity * 0.9, opacity * 1.2, opacity],
+        x: [0, 80, 20, 60, 0],
+        opacity: [opacity, opacity * 1.3, opacity * 0.85, opacity * 1.15, opacity],
       }}
       transition={{
         duration,
@@ -36,12 +36,14 @@ function MistLayer({ x, y, width, opacity, delay, duration }: {
 }
 
 const MIST_LAYERS = [
-  { x: '2%',  y: '52%', width: 320, opacity: 0.07, delay: 0,  duration: 28 },
-  { x: '-5%', y: '58%', width: 420, opacity: 0.06, delay: 5,  duration: 32 },
-  { x: '55%', y: '50%', width: 280, opacity: 0.05, delay: 2,  duration: 26 },
-  { x: '70%', y: '55%', width: 360, opacity: 0.06, delay: 8,  duration: 30 },
-  { x: '35%', y: '60%', width: 500, opacity: 0.04, delay: 3,  duration: 35 },
-  { x: '15%', y: '45%', width: 240, opacity: 0.05, delay: 10, duration: 24 },
+  { x: '-8%',  y: '54%', width: 480, opacity: 0.22, delay: 0,  duration: 30 },
+  { x: '15%',  y: '57%', width: 560, opacity: 0.18, delay: 6,  duration: 36 },
+  { x: '45%',  y: '52%', width: 420, opacity: 0.20, delay: 2,  duration: 28 },
+  { x: '65%',  y: '56%', width: 500, opacity: 0.17, delay: 9,  duration: 33 },
+  { x: '30%',  y: '60%', width: 620, opacity: 0.15, delay: 4,  duration: 40 },
+  { x: '-5%',  y: '62%', width: 380, opacity: 0.16, delay: 14, duration: 26 },
+  { x: '75%',  y: '50%', width: 340, opacity: 0.14, delay: 7,  duration: 31 },
+  { x: '20%',  y: '48%', width: 300, opacity: 0.12, delay: 11, duration: 34 },
 ]
 
 export default function HeroBackground({ mouseX, mouseY }: Props) {
