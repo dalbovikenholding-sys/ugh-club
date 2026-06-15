@@ -65,9 +65,10 @@ export default function HeroBackground({ mouseX, mouseY }: Props) {
         }}
       >
         <div
-          className="w-full h-full bg-cover bg-center bg-no-repeat"
+          className="w-full h-full bg-cover bg-no-repeat"
           style={{
             backgroundImage: 'url(/mountain.png)',
+            backgroundPosition: 'center 10%',
             filter: 'brightness(0.72) contrast(1.12) saturate(0.6)',
           }}
         />
