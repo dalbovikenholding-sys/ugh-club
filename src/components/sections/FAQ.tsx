@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 const groups = [
   {
     label: 'Pris och leverans',
@@ -36,33 +34,6 @@ const groups = [
   },
 ]
 
-function FAQItem({ q, a }: { q: string; a: string }) {
-  const [open, setOpen] = useState(false)
-  return (
-    <div className="border-b border-white/[0.07] last:border-0">
-      <button
-        onClick={() => setOpen(v => !v)}
-        className="w-full text-left py-5 flex justify-between items-center gap-4"
-        style={{ background: 'none', border: 'none', cursor: 'pointer' }}
-      >
-        <span className="font-sans font-semibold text-white/90 text-sm">{q}</span>
-        <span
-          className="font-sans text-white/30 flex-shrink-0 text-base transition-transform duration-250"
-          style={{ transform: open ? 'rotate(180deg)' : 'none', display: 'block' }}
-        >
-          ↓
-        </span>
-      </button>
-      <div
-        className="overflow-hidden transition-all duration-300"
-        style={{ maxHeight: open ? '300px' : '0' }}
-      >
-        <p className="font-sans text-white/65 text-sm leading-relaxed pb-5">{a}</p>
-      </div>
-    </div>
-  )
-}
-
 export default function FAQ() {
   return (
     <section id="faq" className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.70)' }}>
@@ -88,11 +59,18 @@ export default function FAQ() {
                 {group.label}
               </p>
               <div
-                className="rounded-2xl px-6 md:px-8"
+                className="rounded-2xl px-6 md:px-8 py-2"
                 style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.10)' }}
               >
                 {group.faqs.map((faq, i) => (
-                  <FAQItem key={i} {...faq} />
+                  <div
+                    key={i}
+                    className="py-6"
+                    style={{ borderBottom: i < group.faqs.length - 1 ? '1px solid rgba(255,255,255,0.07)' : 'none' }}
+                  >
+                    <p className="font-sans font-semibold text-white/90 text-sm mb-2">{faq.q}</p>
+                    <p className="font-sans text-white/65 text-sm leading-relaxed">{faq.a}</p>
+                  </div>
                 ))}
               </div>
             </div>
