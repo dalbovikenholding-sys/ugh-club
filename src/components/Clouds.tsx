@@ -15,12 +15,12 @@ interface CloudConfig {
 }
 
 const CLOUD_CONFIGS: CloudConfig[] = [
-  { left: '3%',  top: '7%',  width: 220, opacity: 0.82, blur: 4, anim: 'drift1 18s 0s  ease-in-out infinite' },
-  { left: '28%', top: '3%',  width: 290, opacity: 0.78, blur: 5, anim: 'drift2 22s 3s  ease-in-out infinite' },
-  { left: '60%', top: '7%',  width: 200, opacity: 0.80, blur: 4, anim: 'drift3 16s 7s  ease-in-out infinite' },
-  { left: '12%', top: '20%', width: 250, opacity: 0.68, blur: 6, anim: 'drift4 20s 5s  ease-in-out infinite' },
-  { left: '45%', top: '14%', width: 270, opacity: 0.72, blur: 5, anim: 'drift1 24s 10s ease-in-out infinite' },
-  { left: '72%', top: '13%', width: 195, opacity: 0.75, blur: 4, anim: 'drift2 19s 14s ease-in-out infinite' },
+  { left: '-5%', top: '72%', width: 320, opacity: 0.32, blur: 10, anim: 'drift1 22s 0s  ease-in-out infinite' },
+  { left: '20%', top: '76%', width: 360, opacity: 0.28, blur: 12, anim: 'drift2 26s 4s  ease-in-out infinite' },
+  { left: '50%', top: '70%', width: 300, opacity: 0.30, blur: 10, anim: 'drift3 20s 8s  ease-in-out infinite' },
+  { left: '72%', top: '74%', width: 280, opacity: 0.26, blur: 11, anim: 'drift4 24s 6s  ease-in-out infinite' },
+  { left: '5%',  top: '82%', width: 340, opacity: 0.22, blur: 14, anim: 'drift1 28s 12s ease-in-out infinite' },
+  { left: '40%', top: '80%', width: 310, opacity: 0.24, blur: 12, anim: 'drift2 22s 16s ease-in-out infinite' },
 ]
 
 function Cloud({ idx, left, top, width, opacity, anim, blur }: CloudConfig & { idx: number }) {
