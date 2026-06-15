@@ -1,86 +1,46 @@
-import { useEffect, useRef } from 'react'
+const STYLE = `
+@keyframes cd1 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(240px,-18px) scale(1.06)} }
+@keyframes cd2 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(200px, 16px) scale(1.05)} }
+@keyframes cd3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(220px,-24px) scale(1.07)} }
+@keyframes cd4 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(180px, 20px) scale(1.05)} }
+`
 
-interface CloudConfig {
-  x: number
-  y: number
-  width: number
-  height: number
-  blur: number
-  opacity: number
-  durationMs: number
-  delayMs: number
-  driftX: number
-  driftY: number
-}
+interface C { left:string; top:string; w:string; h:string; blur:number; op:number; anim:string }
 
-const CLOUDS: CloudConfig[] = [
-  { x: 0,    y: 380, width: 750,  height: 230, blur: 40, opacity: 0.45, durationMs: 10000, delayMs: 0,    driftX: 260, driftY: -20 },
-  { x: 250,  y: 420, width: 820,  height: 255, blur: 50, opacity: 0.40, durationMs: 13000, delayMs: 2000, driftX: 210, driftY:  18 },
-  { x: 600,  y: 370, width: 680,  height: 210, blur: 44, opacity: 0.42, durationMs: 11000, delayMs: 1000, driftX: 230, driftY: -26 },
-  { x: 850,  y: 435, width: 600,  height: 185, blur: 38, opacity: 0.38, durationMs: 14000, delayMs: 4000, driftX: 180, driftY:  20 },
-  { x: 50,   y: 465, width: 780,  height: 240, blur: 58, opacity: 0.36, durationMs: 12000, delayMs: 3000, driftX: 270, driftY: -16 },
-  { x: 400,  y: 495, width: 700,  height: 215, blur: 48, opacity: 0.33, durationMs: 15000, delayMs: 5000, driftX: 200, driftY:  24 },
-  { x: 950,  y: 395, width: 520,  height: 162, blur: 36, opacity: 0.40, durationMs: 9000,  delayMs: 2000, driftX: 165, driftY: -14 },
-  { x: 150,  y: 510, width: 640,  height: 198, blur: 54, opacity: 0.30, durationMs: 16000, delayMs: 6000, driftX: 240, driftY:  18 },
+const CLOUDS: C[] = [
+  { left:'-5%',  top:'42%', w:'52%', h:'24%', blur:28, op:0.55, anim:'cd1 11s 0s   ease-in-out infinite' },
+  { left:'18%',  top:'46%', w:'58%', h:'27%', blur:34, op:0.50, anim:'cd2 14s 2s   ease-in-out infinite' },
+  { left:'44%',  top:'40%', w:'46%', h:'22%', blur:30, op:0.52, anim:'cd3 12s 1s   ease-in-out infinite' },
+  { left:'62%',  top:'47%', w:'42%', h:'20%', blur:26, op:0.48, anim:'cd4 13s 4s   ease-in-out infinite' },
+  { left:'-3%',  top:'51%', w:'55%', h:'26%', blur:36, op:0.45, anim:'cd1 15s 3s   ease-in-out infinite' },
+  { left:'32%',  top:'54%', w:'50%', h:'24%', blur:32, op:0.42, anim:'cd2 10s 5s   ease-in-out infinite' },
+  { left:'68%',  top:'43%', w:'38%', h:'18%', blur:24, op:0.50, anim:'cd3  9s 2s   ease-in-out infinite' },
+  { left:'10%',  top:'57%', w:'48%', h:'23%', blur:38, op:0.40, anim:'cd4 16s 6s   ease-in-out infinite' },
 ]
-
-function Cloud({ x, y, width, height, blur, opacity, durationMs, delayMs, driftX, driftY }: CloudConfig) {
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-
-    const keyframes = [
-      { transform: 'translate(0px, 0px) scale(1)',                        opacity },
-      { transform: `translate(${driftX}px, ${driftY}px) scale(1.07)`,    opacity: Math.min(opacity * 1.35, 0.9) },
-      { transform: 'translate(0px, 0px) scale(1)',                        opacity },
-    ]
-
-    const anim = el.animate(keyframes, {
-      duration: durationMs,
-      delay: delayMs,
-      iterations: Infinity,
-      easing: 'ease-in-out',
-      fill: 'forwards',
-    })
-
-    return () => anim.cancel()
-  }, [driftX, driftY, durationMs, delayMs, opacity])
-
-  return (
-    <div
-      ref={ref}
-      style={{
-        position: 'absolute',
-        left: x,
-        top: y,
-        width,
-        height,
-        borderRadius: '50%',
-        background: 'radial-gradient(ellipse at center, rgba(210,228,255,1) 0%, rgba(190,215,252,0.6) 55%, transparent 100%)',
-        filter: `blur(${blur}px)`,
-        opacity,
-        pointerEvents: 'none',
-        willChange: 'transform, opacity',
-      }}
-    />
-  )
-}
 
 export default function Clouds() {
   return (
-    <div
-      style={{
-        position: 'absolute',
-        inset: 0,
-        zIndex: 6,
-        pointerEvents: 'none',
-      }}
-    >
-      {CLOUDS.map((cloud, i) => (
-        <Cloud key={i} {...cloud} />
-      ))}
-    </div>
+    <>
+      <style>{STYLE}</style>
+      <div style={{ position:'absolute', inset:0, zIndex:6, pointerEvents:'none' }}>
+        {CLOUDS.map((c, i) => (
+          <div
+            key={i}
+            style={{
+              position: 'absolute',
+              left: c.left,
+              top: c.top,
+              width: c.w,
+              height: c.h,
+              borderRadius: '50%',
+              background: 'radial-gradient(ellipse at center, rgba(215,232,255,1) 0%, rgba(195,218,255,0.55) 55%, transparent 100%)',
+              filter: `blur(${c.blur}px)`,
+              opacity: c.op,
+              animation: c.anim,
+            }}
+          />
+        ))}
+      </div>
+    </>
   )
 }
