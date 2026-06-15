@@ -1,39 +1,16 @@
-import { motion, MotionValue, useSpring, useTransform } from 'framer-motion'
 import Birds from './Birds'
 
-interface Props {
-  mouseX: MotionValue<number>
-  mouseY: MotionValue<number>
-}
-
-
-export default function HeroBackground({ mouseX, mouseY }: Props) {
-  const springConfig = { stiffness: 35, damping: 18 }
-
-  const bgX = useSpring(useTransform(mouseX, [0, 1], [-18, 18]), springConfig)
-  const bgY = useSpring(useTransform(mouseY, [0, 1], [-9, 9]), springConfig)
-
-
+export default function HeroBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {/* Background image with parallax */}
-      <motion.div
-        className="absolute"
+      <div
+        className="absolute inset-0 bg-cover bg-no-repeat"
         style={{
-          inset: '-6%',
-          x: bgX,
-          y: bgY,
+          backgroundImage: 'url(/mountain.png)',
+          backgroundPosition: 'center center',
+          filter: 'brightness(0.82) contrast(1.05) saturate(0.9)',
         }}
-      >
-        <div
-          className="w-full h-full bg-cover bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/mountain.png)',
-            backgroundPosition: 'center center',
-            filter: 'brightness(0.82) contrast(1.05) saturate(0.9)',
-          }}
-        />
-      </motion.div>
+      />
 
       {/* Subtle cinematic darkening overlay */}
       <div
