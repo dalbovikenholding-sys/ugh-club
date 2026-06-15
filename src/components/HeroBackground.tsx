@@ -68,20 +68,16 @@ export default function HeroBackground({ mouseX, mouseY }: Props) {
           className="w-full h-full bg-cover bg-no-repeat"
           style={{
             backgroundImage: 'url(/mountain.png)',
-            backgroundPosition: 'center 10%',
-            filter: 'brightness(0.72) contrast(1.12) saturate(0.6)',
+            backgroundPosition: 'center center',
+            filter: 'brightness(0.82) contrast(1.05) saturate(0.9)',
           }}
         />
       </motion.div>
 
-      {/* Blue cinematic color grade overlay */}
+      {/* Subtle cinematic darkening overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'rgba(15, 30, 60, 0.28)', mixBlendMode: 'multiply' }}
-      />
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: 'rgba(20, 50, 90, 0.15)', mixBlendMode: 'color' }}
+        style={{ background: 'rgba(5, 15, 35, 0.18)', mixBlendMode: 'multiply' }}
       />
 
       {/* Sky gradient deepener */}
