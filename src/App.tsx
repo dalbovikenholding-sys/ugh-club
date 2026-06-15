@@ -17,8 +17,9 @@ import SiteFooter from './components/sections/SiteFooter'
 
 export default function App() {
   return (
-    <div style={{ position: 'relative', zIndex: 1 }}>
+    <>
       <ScrollBackground />
+      <div style={{ position: 'relative', zIndex: 1 }}>
       {/* Cinematic hero — fullscreen */}
       <div className="relative w-full h-screen overflow-hidden">
         <HeroBackground />
@@ -40,5 +41,6 @@ export default function App() {
       <SiteFooter />
       <ScrollToTop />
     </div>
+    </>
   )
 }

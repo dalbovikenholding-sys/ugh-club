@@ -65,7 +65,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.60)' }}>
+    <section id="faq" className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.80)' }}>
       <div className="max-w-3xl mx-auto px-6 py-24">
         <div className="text-center mb-14">
           <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-white/30 mb-4">
