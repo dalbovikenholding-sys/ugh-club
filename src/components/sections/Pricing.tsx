@@ -24,7 +24,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.80)' }}>
+    <section id="pricing" className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.70)' }}>
       <div className="max-w-5xl mx-auto px-6 py-24">
         <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-white/30 mb-4">
           Priser

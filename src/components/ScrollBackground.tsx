@@ -2,8 +2,10 @@ import { useEffect, useRef } from 'react'
 
 export default function ScrollBackground() {
   const ref = useRef<HTMLDivElement>(null)
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches
 
   useEffect(() => {
+    if (isMobile) return
     const update = () => {
       const el = ref.current
       if (!el) return
@@ -14,7 +16,7 @@ export default function ScrollBackground() {
     window.addEventListener('scroll', update, { passive: true })
     update()
     return () => window.removeEventListener('scroll', update)
-  }, [])
+  }, [isMobile])
 
   return (
     <div
@@ -27,8 +29,7 @@ export default function ScrollBackground() {
         backgroundImage: 'url(/bg-panorama.jpg)',
         backgroundSize: 'cover',
         backgroundPositionX: 'center',
-        backgroundPositionY: '0%',
-        willChange: 'background-position',
+        backgroundPositionY: isMobile ? '18%' : '0%',
       }}
     />
   )

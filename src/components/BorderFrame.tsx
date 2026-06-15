@@ -7,7 +7,7 @@ export default function BorderFrame() {
   ]
 
   return (
-    <div className="fixed inset-5 pointer-events-none z-40 border border-white/[0.12]">
+    <div className="hidden sm:block fixed inset-5 pointer-events-none z-40 border border-white/[0.12]">
       {corners.map(({ pos, translate }, i) => (
         <div key={i} className={`absolute ${pos} ${translate} w-3 h-3`}>
           <div className="absolute top-1/2 left-0 right-0 h-px bg-white/40" style={{ transform: 'translateY(-0.5px)' }} />
