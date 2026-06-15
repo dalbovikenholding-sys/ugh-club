@@ -76,7 +76,7 @@ export default function Pricing() {
                 ))}
               </div>
               <a
-                href="mailto:hej@dalboviken.se"
+                href="mailto:info@dalboviken.se"
                 className="mt-auto block text-center rounded-full py-3 font-sans font-semibold text-sm transition-all duration-200"
                 style={{
                   background: plan.popular ? '#a8c4e8' : 'rgba(255,255,255,0.08)',

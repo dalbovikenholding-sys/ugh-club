@@ -76,8 +76,8 @@ export default function FAQ() {
           </h2>
           <p className="font-sans text-white/40 text-sm">
             Maila oss på{' '}
-            <a href="mailto:hej@dalboviken.se" className="text-[#a8c4e8]" style={{ textDecoration: 'none' }}>
-              hej@dalboviken.se
+            <a href="mailto:info@dalboviken.se" className="text-[#a8c4e8]" style={{ textDecoration: 'none' }}>
+              info@dalboviken.se
             </a>
           </p>
         </div>

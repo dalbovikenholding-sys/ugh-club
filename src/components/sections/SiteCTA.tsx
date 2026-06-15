@@ -21,7 +21,7 @@ export default function SiteCTA() {
               Maila oss så hör vi av oss inom 24 timmar med en offert. Inga förpliktelser.
             </p>
             <a
-              href="mailto:hej@dalboviken.se?subject=F%C3%B6rfr%C3%A5gan%20%E2%80%93%20Dalboviken%20Media"
+              href="mailto:info@dalboviken.se?subject=F%C3%B6rfr%C3%A5gan%20%E2%80%93%20Dalboviken%20Media"
               className="inline-flex items-center gap-2 font-sans font-semibold text-sm rounded-full"
               style={{
                 background: '#a8c4e8', color: '#080d18',

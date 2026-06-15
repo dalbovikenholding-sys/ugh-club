@@ -37,7 +37,7 @@ export default function SiteFooter() {
             <h4 className="font-sans font-semibold text-white/40 text-xs tracking-widest uppercase mb-4">Kontakt</h4>
             <div className="flex flex-col gap-3">
               <a href="tel:+46766863274" className="font-sans text-white/35 text-sm hover:text-white/70 transition-colors" style={{ textDecoration: 'none' }}>076-686 32 74</a>
-              <a href="mailto:hej@dalboviken.se" className="font-sans text-white/35 text-sm hover:text-white/70 transition-colors" style={{ textDecoration: 'none' }}>hej@dalboviken.se</a>
+              <a href="mailto:info@dalboviken.se" className="font-sans text-white/35 text-sm hover:text-white/70 transition-colors" style={{ textDecoration: 'none' }}>info@dalboviken.se</a>
               <span className="font-sans text-white/20 text-sm">Luleå, Norrbotten</span>
             </div>
           </div>

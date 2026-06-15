@@ -13,7 +13,7 @@ export default function ContactForm() {
       `Hej,\n\nJag är intresserad av era tjänster. Ni kan nå mig på: ${trimmed}\n\nMed vänlig hälsning`
     )
     window.open(
-      `mailto:hej@dalboviken.se?subject=F%C3%B6rfr%C3%A5gan%20%E2%80%93%20Dalboviken%20Media&body=${body}`,
+      `mailto:info@dalboviken.se?subject=F%C3%B6rfr%C3%A5gan%20%E2%80%93%20Dalboviken%20Media&body=${body}`,
       '_blank',
       'noopener'
     )

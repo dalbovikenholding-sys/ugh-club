@@ -65,7 +65,7 @@ export default function IntegritetspolicyModal({ open, onClose }: Props) {
                 <div>
                   <h3 className="font-semibold text-white/80 mb-2">Personuppgiftsansvarig</h3>
                   <p>Dalboviken Holding AB, org.nr 559582-8152, Luleå.<br />
-                  Kontakt: <a href="mailto:hej@dalboviken.se" className="text-[#a8c4e8]" style={{ textDecoration: 'none' }}>hej@dalboviken.se</a></p>
+                  Kontakt: <a href="mailto:info@dalboviken.se" className="text-[#a8c4e8]" style={{ textDecoration: 'none' }}>info@dalboviken.se</a></p>
                 </div>
 
                 <div>
@@ -85,7 +85,7 @@ export default function IntegritetspolicyModal({ open, onClose }: Props) {
 
                 <div>
                   <h3 className="font-semibold text-white/80 mb-2">Dina rättigheter</h3>
-                  <p>Du har rätt att begära tillgång till, rättelse eller radering av dina personuppgifter. Kontakta oss på <a href="mailto:hej@dalboviken.se" className="text-[#a8c4e8]" style={{ textDecoration: 'none' }}>hej@dalboviken.se</a>.</p>
+                  <p>Du har rätt att begära tillgång till, rättelse eller radering av dina personuppgifter. Kontakta oss på <a href="mailto:info@dalboviken.se" className="text-[#a8c4e8]" style={{ textDecoration: 'none' }}>info@dalboviken.se</a>.</p>
                 </div>
 
                 <div>
