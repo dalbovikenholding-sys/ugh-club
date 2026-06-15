@@ -1,45 +1,42 @@
 import { motion } from 'framer-motion'
 
 interface CloudProps {
-  left: string
-  top: string
+  x: number
+  y: number
   width: number
   height: number
+  blur: number
   opacity: number
   delay: number
   duration: number
-  blur: number
   driftX: number
   driftY: number
 }
 
-function Cloud({ left, top, width, height, opacity, delay, duration, blur, driftX, driftY }: CloudProps) {
+function Cloud({ x, y, width, height, blur, opacity, delay, duration, driftX, driftY }: CloudProps) {
   return (
     <motion.div
-      className="absolute pointer-events-none"
       style={{
-        left,
-        top,
+        position: 'absolute',
+        left: x,
+        top: y,
         width,
         height,
         borderRadius: '50%',
-        background:
-          'radial-gradient(ellipse at center, rgba(215,232,255,1) 0%, rgba(195,218,252,0.65) 50%, transparent 100%)',
+        background: 'rgba(200, 220, 255, 1)',
         filter: `blur(${blur}px)`,
-        mixBlendMode: 'screen',
         opacity,
+        pointerEvents: 'none',
       }}
       animate={{
-        x: [0, driftX],
-        y: [0, driftY],
-        opacity: [opacity, opacity * 1.3],
-        scale: [1, 1.08],
+        x: [0, driftX, 0],
+        y: [0, driftY, 0],
+        opacity: [opacity, opacity * 1.4, opacity],
       }}
       transition={{
         duration,
         delay,
         repeat: Infinity,
-        repeatType: 'mirror',
         ease: 'easeInOut',
       }}
     />
@@ -47,21 +44,25 @@ function Cloud({ left, top, width, height, opacity, delay, duration, blur, drift
 }
 
 const CLOUDS: CloudProps[] = [
-  { left: '-10%', top: '46%', width: 640, height: 200, opacity: 0.40, delay: 0,   duration: 12, blur: 40, driftX: 220, driftY: -18 },
-  { left: '20%',  top: '50%', width: 700, height: 215, opacity: 0.36, delay: 3,   duration: 15, blur: 50, driftX: 180, driftY:  12 },
-  { left: '48%',  top: '44%', width: 560, height: 170, opacity: 0.33, delay: 1,   duration: 13, blur: 42, driftX: 200, driftY: -22 },
-  { left: '62%',  top: '52%', width: 480, height: 150, opacity: 0.30, delay: 5,   duration: 16, blur: 36, driftX: 160, driftY:  16 },
-  { left: '4%',   top: '56%', width: 660, height: 195, opacity: 0.28, delay: 2,   duration: 14, blur: 54, driftX: 240, driftY: -14 },
-  { left: '35%',  top: '59%', width: 580, height: 175, opacity: 0.26, delay: 6,   duration: 18, blur: 46, driftX: 190, driftY:  20 },
-  { left: '72%',  top: '48%', width: 420, height: 130, opacity: 0.31, delay: 4,   duration: 11, blur: 34, driftX: 150, driftY: -10 },
-  { left: '-5%',  top: '62%', width: 500, height: 152, opacity: 0.24, delay: 7,   duration: 17, blur: 58, driftX: 210, driftY:  18 },
+  { x: -80,  y: 390, width: 700, height: 220, blur: 45, opacity: 0.18, delay: 0,  duration: 10, driftX: 250, driftY: -20 },
+  { x: 200,  y: 420, width: 800, height: 250, blur: 55, opacity: 0.15, delay: 2,  duration: 13, driftX: 200, driftY:  15 },
+  { x: 550,  y: 380, width: 650, height: 200, blur: 48, opacity: 0.16, delay: 1,  duration: 11, driftX: 220, driftY: -25 },
+  { x: 800,  y: 430, width: 580, height: 180, blur: 40, opacity: 0.14, delay: 4,  duration: 14, driftX: 180, driftY:  18 },
+  { x: -50,  y: 460, width: 750, height: 230, blur: 60, opacity: 0.13, delay: 3,  duration: 12, driftX: 260, driftY: -15 },
+  { x: 350,  y: 490, width: 680, height: 210, blur: 50, opacity: 0.12, delay: 5,  duration: 15, driftX: 190, driftY:  22 },
+  { x: 900,  y: 400, width: 500, height: 160, blur: 38, opacity: 0.15, delay: 2,  duration: 9,  driftX: 160, driftY: -12 },
+  { x: 100,  y: 500, width: 620, height: 190, blur: 52, opacity: 0.11, delay: 6,  duration: 16, driftX: 230, driftY:  16 },
 ]
 
 export default function Clouds() {
   return (
     <div
-      className="absolute inset-0 pointer-events-none overflow-hidden"
-      style={{ zIndex: 6 }}
+      style={{
+        position: 'absolute',
+        inset: 0,
+        zIndex: 6,
+        pointerEvents: 'none',
+      }}
     >
       {CLOUDS.map((cloud, i) => (
         <Cloud key={i} {...cloud} />
