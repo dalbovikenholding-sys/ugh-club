@@ -1,7 +1,12 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
-const LINKS = ['Om oss', 'Tjänster', 'Portfolio', 'Kontakt']
+const LINKS = [
+  { num: '01', label: 'Om oss' },
+  { num: '02', label: 'Tjänster' },
+  { num: '03', label: 'Portfolio' },
+  { num: '04', label: 'Kontakt' },
+]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -20,24 +25,18 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(v => !v)}
-          className="flex items-center gap-2.5 text-white/75 hover:text-white transition-colors duration-300"
+          className="flex items-center gap-2.5 text-white/75 hover:text-white transition-colors duration-300 relative z-50"
         >
           <span className="text-[10px] tracking-[0.25em] uppercase font-light">
             {open ? 'Stäng' : 'Menu'}
           </span>
           <div className="flex flex-col gap-[4px] w-4">
-            <span
-              className="block h-px bg-current transition-all duration-300 origin-center"
-              style={{ transform: open ? 'rotate(45deg) translateY(5px)' : 'none' }}
-            />
-            <span
-              className="block h-px bg-current transition-all duration-300"
-              style={{ opacity: open ? 0 : 1 }}
-            />
-            <span
-              className="block h-px bg-current transition-all duration-300 origin-center"
-              style={{ transform: open ? 'rotate(-45deg) translateY(-5px)' : 'none' }}
-            />
+            <span className="block h-px bg-current transition-all duration-300 origin-center"
+              style={{ transform: open ? 'rotate(45deg) translateY(5px)' : 'none' }} />
+            <span className="block h-px bg-current transition-all duration-300"
+              style={{ opacity: open ? 0 : 1 }} />
+            <span className="block h-px bg-current transition-all duration-300 origin-center"
+              style={{ transform: open ? 'rotate(-45deg) translateY(-5px)' : 'none' }} />
           </div>
         </button>
       </motion.nav>
@@ -45,43 +44,64 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="absolute inset-0 z-40 flex flex-col items-end justify-center pr-16"
-            style={{
-              background: 'rgba(4, 8, 20, 0.82)',
-              backdropFilter: 'blur(24px)',
-              WebkitBackdropFilter: 'blur(24px)',
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.35, ease: 'easeInOut' }}
+            className="absolute top-0 right-0 bottom-0 z-40 flex flex-col justify-center"
+            style={{ width: 'min(320px, 45vw)' }}
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
           >
-            <nav className="flex flex-col items-end gap-8">
-              {LINKS.map((link, i) => (
+            {/* glass panel */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: 'rgba(4, 9, 22, 0.72)',
+                backdropFilter: 'blur(22px)',
+                WebkitBackdropFilter: 'blur(22px)',
+                borderLeft: '1px solid rgba(255,255,255,0.07)',
+              }}
+            />
+
+            {/* links */}
+            <nav className="relative flex flex-col gap-1 px-10 py-6">
+              {LINKS.map(({ num, label }, i) => (
                 <motion.a
-                  key={link}
+                  key={label}
                   href="#"
                   onClick={() => setOpen(false)}
-                  className="text-white/80 hover:text-white font-serif italic"
-                  style={{ fontSize: 'clamp(28px, 4vw, 52px)', letterSpacing: '-0.01em' }}
-                  initial={{ opacity: 0, x: 30 }}
+                  className="group flex items-baseline gap-4 py-4"
+                  style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}
+                  initial={{ opacity: 0, x: 24 }}
                   animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 30 }}
-                  transition={{ duration: 0.3, delay: i * 0.06, ease: 'easeOut' }}
+                  exit={{ opacity: 0, x: 16 }}
+                  transition={{ duration: 0.35, delay: 0.15 + i * 0.07, ease: 'easeOut' }}
                 >
-                  {link}
+                  <span
+                    className="text-white/25 font-sans font-light tabular-nums group-hover:text-white/50 transition-colors duration-200"
+                    style={{ fontSize: '10px', letterSpacing: '0.1em' }}
+                  >
+                    {num}
+                  </span>
+                  <span
+                    className="text-white/80 font-serif italic group-hover:text-white transition-colors duration-200"
+                    style={{ fontSize: 'clamp(22px, 2.8vw, 34px)', letterSpacing: '-0.01em', lineHeight: 1 }}
+                  >
+                    {label}
+                  </span>
                 </motion.a>
               ))}
             </nav>
 
+            {/* footer */}
             <motion.p
-              className="absolute bottom-10 left-9 font-serif text-white/25 text-xs tracking-widest uppercase"
+              className="relative px-10 pb-10 text-white/20 font-sans"
+              style={{ fontSize: '9px', letterSpacing: '0.18em' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ delay: 0.25 }}
+              transition={{ delay: 0.45 }}
             >
-              Dalboviken Media — Luleå
+              DALBOVIKEN MEDIA — LULEÅ
             </motion.p>
           </motion.div>
         )}
