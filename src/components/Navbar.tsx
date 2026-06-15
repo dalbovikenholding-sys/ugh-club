@@ -12,7 +12,7 @@ export default function Navbar() {
       transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
     >
       <span className="text-white font-serif text-xs tracking-[0.3em] uppercase select-none">
-        UGH
+        DALBOVIKEN
       </span>
 
       <button

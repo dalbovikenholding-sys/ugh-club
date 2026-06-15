@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import EmailForm from './EmailForm'
+import ContactForm from './ContactForm'
 
 export default function HeroContent() {
   return (
@@ -14,15 +14,15 @@ export default function HeroContent() {
         className="text-white font-sans font-black leading-[1.05] tracking-[-0.02em] mb-1"
         style={{ fontSize: 'clamp(28px, 2.8vw, 48px)' }}
       >
-        <span className="block whitespace-nowrap">Join The Club Before</span>
-        <span className="block whitespace-nowrap">Everyone Else Does.</span>
+        <span className="block whitespace-nowrap">Din hemsida.</span>
+        <span className="block whitespace-nowrap">Byggd för att synas.</span>
       </h1>
 
       <p
         className="font-serif italic text-white leading-tight mb-3"
         style={{ fontSize: 'clamp(28px, 2.8vw, 42px)', fontWeight: 600 }}
       >
-        Ugh.
+        Dalboviken Media.
       </p>
 
       <p
@@ -34,12 +34,11 @@ export default function HeroContent() {
           letterSpacing: '0.01em',
         }}
       >
-        Want To Be The Cool Kid Of Trading? Join UGH Club And Get Access To
-        The Secret Sauce Before Everyone Else. Because Let's Face It, Being
-        Average Is So 2025.
+        Vi skapar moderna hemsidor för nordsvenska företag. Snabbt,
+        enkelt och utan tekniska krångel. Klart på 24 timmar.
       </p>
 
-      <EmailForm />
+      <ContactForm />
     </motion.div>
   )
 }

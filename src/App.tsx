@@ -2,7 +2,6 @@ import Navbar from './components/Navbar'
 import HeroBackground from './components/HeroBackground'
 import Mist from './components/Mist'
 import HeroContent from './components/HeroContent'
-import SponsorLogos from './components/SponsorLogos'
 import BorderFrame from './components/BorderFrame'
 import FilmGrain from './components/FilmGrain'
 
@@ -15,7 +14,6 @@ export default function App() {
       <BorderFrame />
       <Navbar />
       <HeroContent />
-      <SponsorLogos />
     </div>
   )
 }
