@@ -7,7 +7,7 @@ const links = [
 
 export default function SiteFooter() {
   return (
-    <footer className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.90)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
+    <footer className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.75)' }}>
       <div className="max-w-5xl mx-auto px-6 py-14 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <p className="font-serif text-white/80 text-sm tracking-[0.2em] uppercase mb-3">

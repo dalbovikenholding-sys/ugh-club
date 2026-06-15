@@ -1,6 +1,6 @@
 export default function SiteCTA() {
   return (
-    <section className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.82)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
+    <section className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.60)' }}>
       <div className="max-w-5xl mx-auto px-6 py-24">
         <div
           className="rounded-3xl p-12 md:p-16 relative overflow-hidden"
