@@ -15,7 +15,7 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="border-t border-white/[0.06]" style={{ background: '#080d18' }}>
+    <section className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.82)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
       <div className="max-w-5xl mx-auto px-6 py-24">
         <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-white/30 mb-4">
           Smärtpunkter

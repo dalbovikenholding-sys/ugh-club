@@ -13,7 +13,7 @@ const included = [
 
 export default function Solution() {
   return (
-    <section className="border-t border-white/[0.06]" style={{ background: '#0b1020' }}>
+    <section className="border-t border-white/[0.06]" style={{ background: 'rgba(8,13,24,0.82)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
       <div className="max-w-5xl mx-auto px-6 py-24">
         <div className="grid gap-16 lg:grid-cols-2 items-center">
           <div>

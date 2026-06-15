@@ -3,14 +3,6 @@ import Birds from './Birds'
 export default function HeroBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/mountain.png)',
-          backgroundPosition: 'center center',
-          filter: 'brightness(0.82) contrast(1.05) saturate(0.9)',
-        }}
-      />
 
       {/* Subtle cinematic darkening overlay */}
       <div
