@@ -2,6 +2,7 @@ const plans = [
   {
     name: 'Core',
     price: '14 900 kr',
+    priceLabel: 'engångspris',
     monthly: null,
     popular: false,
     features: ['Sajt som konverterar (4–6 sidor)', 'Google Business Profile setup', 'Lokal SEO-grund', 'Professionell copy skriven åt dig', '30 dagars support efter lansering', 'Uppstart via formulär och mail', 'Mobiloptimerad och snabb'],
@@ -9,16 +10,18 @@ const plans = [
   {
     name: 'Pro',
     price: '22 900 kr',
+    priceLabel: 'engångspris',
     monthly: null,
     popular: true,
     features: ['Allt i Core', 'Extra sidor (upp till 8)', 'Google Ads-landningssida', 'Djupgående lokal SEO', 'Utökad copy och branschanpassning', 'Prioriterad support', 'Analys av konkurrenters sajter'],
   },
   {
     name: 'Pro + Drift',
-    price: '22 900 kr',
-    monthly: '+ 1 490 kr/mån',
+    price: '1 490 kr',
+    priceLabel: 'per månad',
+    monthly: '22 900 kr i uppstart, sedan 1 490 kr/mån',
     popular: false,
-    features: ['Allt i Pro', 'Löpande underhåll', 'Månadsvis innehållsuppdatering', 'Teknisk support utan tidsgräns', 'Prioritet vid nya funktioner', 'Månadsrapport om prestanda', 'Du slipper tänka på det'],
+    features: ['Allt i Pro ingår i uppstarten', 'Löpande underhåll och säkerhetsuppdateringar', 'En innehållsändring per månad (text, bild)', 'Teknisk support, ingen tidsgräns', 'Månadsrapport: trafik och sökpositioner', 'Vi håller koll, du fokuserar på jobbet'],
   },
 ]
 
@@ -55,11 +58,14 @@ export default function Pricing() {
                 </span>
               )}
               <h3 className="font-sans font-semibold text-white/85 text-lg mb-3">{plan.name}</h3>
-              <p className="font-serif italic mb-1" style={{ fontSize: '30px', color: plan.popular ? '#a8c4e8' : 'rgba(255,255,255,0.85)' }}>
-                {plan.price}
-              </p>
+              <div className="flex items-baseline gap-2 mb-0.5">
+                <p className="font-serif italic" style={{ fontSize: '30px', color: plan.popular ? '#a8c4e8' : 'rgba(255,255,255,0.85)' }}>
+                  {plan.price}
+                </p>
+                <span className="font-sans text-white/35 text-xs">{plan.priceLabel}</span>
+              </div>
               {plan.monthly && (
-                <p className="font-sans text-white/35 text-xs mb-6">{plan.monthly}</p>
+                <p className="font-sans text-white/35 text-xs mb-6 leading-relaxed">{plan.monthly}</p>
               )}
               <div className={`flex flex-col gap-3 mb-8 ${plan.monthly ? '' : 'mt-5'}`}>
                 {plan.features.map((f) => (
