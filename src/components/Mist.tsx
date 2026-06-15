@@ -5,9 +5,9 @@ const STYLE = `
 `
 
 const LAYERS = [
-  { bottom: '18%', height: '22%', anim: 'mist1 28s 0s ease-in-out infinite' },
-  { bottom: '8%',  height: '28%', anim: 'mist2 34s 6s ease-in-out infinite' },
-  { bottom: '0%',  height: '20%', anim: 'mist3 22s 3s ease-in-out infinite' },
+  { bottom: '18%', height: '22%', startOp: 0.14, anim: 'mist1 28s 0s ease-in-out infinite both' },
+  { bottom: '8%',  height: '28%', startOp: 0.10, anim: 'mist2 34s 6s ease-in-out infinite both' },
+  { bottom: '0%',  height: '20%', startOp: 0.08, anim: 'mist3 22s 3s ease-in-out infinite both' },
 ]
 
 export default function Mist() {
@@ -26,6 +26,7 @@ export default function Mist() {
               height: l.height,
               background: 'linear-gradient(to top, rgba(200,218,240,0.55) 0%, rgba(210,228,248,0.25) 50%, transparent 100%)',
               filter: 'blur(18px)',
+              opacity: l.startOp,
               animation: l.anim,
             }}
           />
