@@ -11,7 +11,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{ maxWidth: '360px' }}>
       <motion.div
         className="flex items-center rounded-full px-4 py-2.5 gap-3"
         style={{

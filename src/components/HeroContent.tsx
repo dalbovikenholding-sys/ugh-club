@@ -4,7 +4,7 @@ import ContactForm from './ContactForm'
 export default function HeroContent() {
   return (
     <motion.div
-      className="absolute bottom-0 left-0 z-20 pb-16 pl-12"
+      className="absolute bottom-0 left-0 right-0 z-20 pb-12 px-6 sm:right-auto sm:pb-16 sm:pl-12 sm:pr-0"
       style={{ maxWidth: '600px' }}
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
@@ -12,7 +12,7 @@ export default function HeroContent() {
     >
       <h1
         className="text-white font-sans font-black leading-[1.05] tracking-[-0.02em] mb-1"
-        style={{ fontSize: 'clamp(28px, 2.8vw, 48px)' }}
+        style={{ fontSize: 'clamp(24px, 2.8vw, 48px)' }}
       >
         <span className="block whitespace-nowrap">Din hemsida.</span>
         <span className="block whitespace-nowrap">Byggd för att synas.</span>
@@ -20,7 +20,7 @@ export default function HeroContent() {
 
       <p
         className="font-serif italic text-white leading-tight mb-3"
-        style={{ fontSize: 'clamp(28px, 2.8vw, 42px)', fontWeight: 600 }}
+        style={{ fontSize: 'clamp(24px, 2.8vw, 42px)', fontWeight: 600 }}
       >
         Dalboviken Media.
       </p>
