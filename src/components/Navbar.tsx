@@ -2,10 +2,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
 const LINKS = [
-  { num: '01', label: 'Om oss' },
-  { num: '02', label: 'Tjänster' },
-  { num: '03', label: 'Portfolio' },
-  { num: '04', label: 'Kontakt' },
+  { num: '01', label: 'Erbjudandet',     href: '#offer' },
+  { num: '02', label: 'Hur det går till', href: '#process' },
+  { num: '03', label: 'Priser',           href: '#pricing' },
+  { num: '04', label: 'Vanliga frågor',   href: '#faq' },
 ]
 
 export default function Navbar() {
@@ -64,10 +64,10 @@ export default function Navbar() {
 
             {/* links */}
             <nav className="relative flex flex-col gap-1 px-10 py-6">
-              {LINKS.map(({ num, label }, i) => (
+              {LINKS.map(({ num, label, href }, i) => (
                 <motion.a
                   key={label}
-                  href="#"
+                  href={href}
                   onClick={() => setOpen(false)}
                   className="group flex items-baseline gap-4 py-4"
                   style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}

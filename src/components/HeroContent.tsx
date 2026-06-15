@@ -10,12 +10,16 @@ export default function HeroContent() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.1, ease: [0.25, 0.1, 0.25, 1], delay: 0.4 }}
     >
+      <p className="text-white/40 font-sans mb-3" style={{ fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase' }}>
+        Synlig på 7 dagar · Luleå / Norrbotten
+      </p>
+
       <h1
         className="text-white font-sans font-black leading-[1.05] tracking-[-0.02em] mb-1"
         style={{ fontSize: 'clamp(24px, 2.8vw, 48px)' }}
       >
-        <span className="block whitespace-nowrap">Din hemsida.</span>
-        <span className="block whitespace-nowrap">Byggd för att synas.</span>
+        <span className="block whitespace-nowrap">Din hemsida och</span>
+        <span className="block whitespace-nowrap">Google-närvaro, live på 7 dagar.</span>
       </h1>
 
       <p
@@ -30,12 +34,12 @@ export default function HeroContent() {
         style={{
           color: 'rgba(255,255,255,0.45)',
           fontSize: '11px',
-          maxWidth: '300px',
+          maxWidth: '320px',
           letterSpacing: '0.01em',
         }}
       >
-        Vi skapar moderna hemsidor för nordsvenska företag. Snabbt,
-        enkelt och utan tekniska krångel. Klart på 24 timmar.
+        Vi bygger hemsidan, skriver copy och sätter upp Google Business.
+        Fast pris, ingen telefon, inga möten.
       </p>
 
       <ContactForm />
