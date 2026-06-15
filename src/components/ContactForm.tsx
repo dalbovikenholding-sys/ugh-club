@@ -7,7 +7,17 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (email.trim()) setSubmitted(true)
+    const trimmed = email.trim()
+    if (!trimmed) return
+    const body = encodeURIComponent(
+      `Hej,\n\nJag är intresserad av era tjänster. Ni kan nå mig på: ${trimmed}\n\nMed vänlig hälsning`
+    )
+    window.open(
+      `mailto:hej@dalboviken.se?subject=F%C3%B6rfr%C3%A5gan%20%E2%80%93%20Dalboviken%20Media&body=${body}`,
+      '_blank',
+      'noopener'
+    )
+    setSubmitted(true)
   }
 
   return (
@@ -43,13 +53,14 @@ export default function ContactForm() {
         </svg>
 
         {submitted ? (
-          <span className="text-white/60 text-sm flex-1">Tack. Vi hör av oss snart.</span>
+          <span className="text-white/60 text-sm flex-1">Tack. Ditt mejlprogram öppnas nu.</span>
         ) : (
           <input
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
             placeholder="Din e-postadress"
+            required
             className="bg-transparent flex-1 min-w-0"
             style={{ color: 'rgba(255,255,255,0.85)', fontSize: '13px' }}
           />
