@@ -15,27 +15,30 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section style={{ background: '#0c1220', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '80px 24px' }}>
-        <p style={{ fontSize: '10px', letterSpacing: '0.2em', color: 'rgba(255,255,255,0.35)', textTransform: 'uppercase', marginBottom: '16px' }}>
+    <section className="border-t border-white/[0.06]" style={{ background: '#080d18' }}>
+      <div className="max-w-5xl mx-auto px-6 py-24">
+        <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-white/30 mb-4">
           Smärtpunkter
         </p>
-        <h2 style={{ fontSize: 'clamp(26px, 3vw, 42px)', fontWeight: 700, color: 'rgba(255,255,255,0.92)', marginBottom: '10px' }}>
+        <h2 className="font-serif italic text-white/90 mb-3" style={{ fontSize: 'clamp(28px, 3.5vw, 48px)' }}>
           Känner du igen dig?
         </h2>
-        <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.50)', marginBottom: '52px' }}>
+        <p className="font-sans text-white/45 text-base mb-14">
           Du är bra på ditt jobb. Det räcker inte längre.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+        <div className="grid gap-5 md:grid-cols-3">
           {problems.map((p) => (
-            <div key={p.title} style={{
-              background: 'rgba(255,255,255,0.04)',
-              border: '1px solid rgba(255,255,255,0.08)',
-              borderRadius: '16px',
-              padding: '28px',
-            }}>
-              <h3 style={{ fontSize: '16px', fontWeight: 600, color: 'rgba(255,255,255,0.88)', marginBottom: '10px' }}>{p.title}</h3>
-              <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.50)', lineHeight: 1.65 }}>{p.text}</p>
+            <div
+              key={p.title}
+              className="rounded-2xl p-7"
+              style={{
+                background: 'rgba(255,255,255,0.04)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                backdropFilter: 'blur(8px)',
+              }}
+            >
+              <h3 className="font-sans font-semibold text-white/85 text-base mb-3">{p.title}</h3>
+              <p className="font-sans text-white/45 text-sm leading-relaxed">{p.text}</p>
             </div>
           ))}
         </div>

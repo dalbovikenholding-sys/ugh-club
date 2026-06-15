@@ -4,6 +4,7 @@ import Mist from './components/Mist'
 import HeroContent from './components/HeroContent'
 import BorderFrame from './components/BorderFrame'
 import FilmGrain from './components/FilmGrain'
+import ScrollToTop from './components/ScrollToTop'
 import Problem from './components/sections/Problem'
 import Solution from './components/sections/Solution'
 import Offer from './components/sections/Offer'
@@ -35,6 +36,7 @@ export default function App() {
       <FAQ />
       <SiteCTA />
       <SiteFooter />
+      <ScrollToTop />
     </div>
   )
 }

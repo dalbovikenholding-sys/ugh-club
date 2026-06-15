@@ -19,9 +19,13 @@ export default function Navbar() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
       >
-        <span className="text-white font-serif text-xs tracking-[0.3em] uppercase select-none">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="text-white font-serif text-xs tracking-[0.3em] uppercase"
+          style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+        >
           DALBOVIKEN
-        </span>
+        </button>
 
         <button
           onClick={() => setOpen(v => !v)}
