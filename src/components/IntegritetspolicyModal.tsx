@@ -64,7 +64,7 @@ export default function IntegritetspolicyModal({ open, onClose }: Props) {
               <div className="flex flex-col gap-6 font-sans text-white/55 text-sm leading-relaxed">
                 <div>
                   <h3 className="font-semibold text-white/80 mb-2">Personuppgiftsansvarig</h3>
-                  <p>Dalboviken Holding AB, org.nr 559582-8152, Luleå.<br />
+                  <p>Dalboviken Drift AB, org.nr 559590-6198, Luleå.<br />
                   Kontakt: <a href="mailto:info@dalboviken.se" className="text-[#a8c4e8]" style={{ textDecoration: 'none' }}>info@dalboviken.se</a></p>
                 </div>
 
